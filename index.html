@@ -14,130 +14,378 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+      /* Custom styles for the circles */
+      .circle {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 20px;
+				padding: 2em;
+      }
+      .circle.small {
+				display: inline;
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+      }
+      .circle.red {
+        background-color: red;
+      }
+      .circle.green {
+        background-color: green;
+      }
+      .circle.blue {
+        background-color: blue;
+      }
+			.white {
+				color: white;
+			}
+			.blue {
+				color: #3BA9FA;
+			}
+    </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<!-- Slide 1: Título da presentación -->
+				<!-- #region 1. Introdución -->
+					<section data-background="#3BA9FA">
+						<!-- <img style="width: 500px;" src="./public/logo.png"/> -->
+						<h1 style="color: white"><em>Eatit!</em></h1>
+						<p style="font-size: 0.7em; color: white">Por Diego Souto</p>
+
+						<aside class="notes">
+							Bo día, son Diego e hoxe quero presentarvos o meu proxecto de fin de grao: Eatit!
+						</aside>
+					</section>
+				
+					<!-- 1 - Qué é Eatit!? -->
+					<section>
+						<h2 style="color: #3BA9FA;">Qué é Eatit!?</h2>
+
+						<aside class="notes">
+							Eatit! é unha plataforma web que busca conectar cociñeiros caseiros con usuarios interesados en probar pratos únicos e personalizados, ofrecendo unha experiencia gastronómica diferente.
+						</aside>
+					</section>
+
+					<!-- 2 - Diferenza cos competidores -->
+					<section>
+						<h3 style="color: #3BA9FA;">Diferencia cos competidores</h3>
+						<img style="width: 200px;" src="https://www.liderlogo.es/wp-content/uploads/2022/12/a8714cadb2358c6a32ce232025eb13fe.png"/>
+						<img style="width: 300px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Uber_Eats_2018_logo.svg/1280px-Uber_Eats_2018_logo.svg.png"/>
+
+						<aside class="notes">
+							Poderíamos comparadas con apps de delivery como Uber Eats ou Glovo, pero o sea principal punto diferencial é que en lugar de estar poboada por cadenas de comida rápida e restaurantes, esta aplicación dalle lugar a cociñeiros individuais
+						</aside>
+					</section>
+
+					<!-- 3 - Obxectivo principal -->
+					<section>
+						<h3 style="color: #3BA9FA;">Obxectivo principal</h3>
+
+						<aside class="notes">
+							O objetivo desta ferramenta é facilitar a venda de receitas caseiras, mellorar a visibilidade de cociñeiros locais e proporcionar unha experiencia personalizada aos usuarios con pratos mais innovadores.
+						</aside>
+					</section>
+			<!-- #endregion -->
+
+			<!-- #region 2. Xustificación da súa necesidade -->
+				<!-- 1 - Por qué é necesario -->
 				<section>
-					<h1>Eatit!</h1>
-					<p style="font-size: 0.8em;">Por Diego Souto</p>
-				</section>
-			
-				<!-- Slide 2: Introdución -->
-				<section>
-					<h2>Introdución</h2>
-					<p><strong>Eatit</strong> é unha plataforma web que conecta:</p>
-					<ul>
-						<li><strong>Cociñeiros</strong>: Publican receitas caseiras</li>
-						<li><strong>Foodies</strong>: Solicitan e reciben pratos únicos</li>
-						<li><strong>Repartidores</strong>: Encargados da entrega</li>
-					</ul>
-					<p>Obxectivo: Facilitar o acceso a comida caseira e local.</p>
-				</section>
-			
-				<!-- Slide 3: Xustificación do proxecto -->
-				<section>
-					<h2>Xustificación do proxecto</h2>
-					<p>Por que é necesario <strong>Eatit</strong>?</p>
+					<h3 style="color: #3BA9FA;">Por qué é necesario <strong>Eatit</strong>?</h3>
 					<ul>
 						<li><strong>Tendencia</strong> de consumo local e saudable</li>
 						<li>Falta de conexión directa entre cociñeiros e consumidores</li>
 						<li>Oportunidade para <strong>cociñeiros locais</strong> de monetizar as súas habilidades</li>
 					</ul>
 				</section>
-			
-				<!-- Slide 4: Caso de uso -->
+
 				<section>
-					<h2>Caso de uso</h2>
-					<p>Exemplo simple do funcionamento:</p>
-					<ol>
-						<li>Un <strong>cociñeiro</strong> publica unha receita.</li>
-						<li>Un <strong>foodie</strong> solicita o prato e realiza o pago.</li>
-						<li>O <strong>repartidor</strong> entrega a receita no prazo indicado.</li>
-					</ol>
-					<img src="images/caso-uso.png" alt="Caso de uso" style="width: 60%; margin-top: 10px;">
-				</section>
-			
-				<!-- Slide 5: Tecnoloxías empregadas -->
-				<section>
-					<section>
-						<h2>Tecnoloxías empregadas</h2>
-						<ul>
-							<li><strong>Frontend:</strong> React + Vite</li>
-							<li><strong>Backend:</strong> Node.js + Express</li>
-							<li><strong>Base de datos:</strong> MongoDB Atlas</li>
-							<li><strong>Despregamento:</strong> Render</li>
-						</ul>
+						<!-- 2 - Problemas principais -->
+						<section>
+							<h2 style="color: #3BA9FA;">Problemas principais</h2>
+							<ul>
+								<li>Os <strong>usuarios buscan alternativas</strong> á restauración tradicional, <strong>enfocadas en calidade e autenticidade.</strong></li>
+								<li>Co aumento do custo de vida e a inflación, <strong>moitas persoas buscan alternativas máis económicas para a súa alimentació.</strong></li>
+							</ul>
+						</section>
+
+						<!-- 3 - Solucións plantexadas -->
+						<section>
+							<h2 style="color: #3BA9FA;">Solucións plantexadas</h2>
+							<ul>
+								<li><strong>Crear un esparzo dixital que conecte ambas partes</strong>: xente que busca obter un beneficio económico a partir de platos que xa tiñan pensado preparar e xente que busque platos caseiros abastándose da comida rápida e grandes cadeas.</li>
+								<li>Fomentar a economía local...</li>
+							</ul>
+						</section>
 					</section>
+
+					<!-- 3 - Usuarios Obxectivo -->
 					<section>
-						<p>Por que estas tecnoloxías?</p>
-						<ul>
-							<li>Rendemento óptimo</li>
-							<li>Escalabilidade</li>
-							<li>Solucións de baixo custo</li>
-						</ul>
+						<!-- Initial introduction with auto-animate -->
+						<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+							<h2 style="color: #3BA9FA;">Usuarios obxectivo</h2>
+							<p><strong>Eatit</strong> é unha plataforma que conecta:</p>
+							<div class="r-hstack justify-center">
+								<div class="circle red" data-id="user1">
+									<p style="color: white">C</p>
+								</div>
+								<div class="circle blue" data-id="user2">
+									<p style="color: white">F</p>
+								</div>
+								<div class="circle green" data-id="user3">
+									<p style="color: white">R</p>
+								</div>
+							</div>
+
+							<aside class="notes">
+								Eatit está plantexada para 3 tipos de usuarios: 
+							</aside>
+						</section>
+					
+						<!-- Auto-animate focus on Cociñeiros -->
+						<section data-background="red" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+							<h2>Cociñeiros</h2>
+							<iframe src="https://giphy.com/embed/xT0xePLIUyxnXso8co" width="680" height="469" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xT0xePLIUyxnXso8co"></a></p>
+							<p>Publican receitas caseiras.</p>
+							<div class="circle red small" data-id="user1"></div>
+
+							<aside class="notes">
+								Cociñeiros: persoas que planifican as súas comidas da semana e que non lles importaría cociñar unha maior cantidade de comida a cambio de aproveitar a compra de ingredientes máis baratos (xa que ao comprar en grandes cantidades afórrase máis). Ademais, estas persoas poderían gañar diñeiro cun pequeno esforzo adicional ao cociñar o que xa tiñan pensado, pero en maior cantidade
+							</aside>
+						</section>
+
+						<!-- Initial introduction with auto-animate -->
+						<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+							<h2 style="color: #3BA9FA;">Usuarios obxectivo</h2>
+							<p><strong>Eatit</strong> é unha plataforma que conecta:</p>
+							<div class="r-hstack justify-center">
+								<div class="circle red" data-id="user1">
+									<p style="color: white">C</p>
+								</div>
+								<div class="circle blue" data-id="user2">
+									<p style="color: white">F</p>
+								</div>
+								<div class="circle green" data-id="user3">
+									<p style="color: white">R</p>
+								</div>
+							</div>
+						</section>
+					
+						<!-- Auto-animate focus on Foodies -->
+						<section data-background="blue" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+							<h2>Foodies</h2>
+							<iframe src="https://giphy.com/embed/xT0xeMA62E1XIlup68" width="680" height="469" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xT0xePLIUyxnXso8co"></a></p>
+							<p>Solicitan e reciben pratos únicos.</p>
+							<div class="circle blue small" data-id="user2"></div>
+
+							<aside class="notes">
+								Foodies: aquelas persoas que queiran comer de xeito tradicional sen depender de aplicacións de envío de alimentos como Uber ou Glovo, que están principalmente poboadas por cadeas de comida rápida
+							</aside>
+						</section>
+
+						<!-- Initial introduction with auto-animate -->
+						<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+							<h2 style="color: #3BA9FA;">Usuarios obxectivo</h2>
+							<p><strong>Eatit</strong> é unha plataforma que conecta:</p>
+							<div class="r-hstack justify-center">
+								<div class="circle red" data-id="user1">
+									<p style="color: white">C</p>
+								</div>
+								<div class="circle blue" data-id="user2">
+									<p style="color: white">F</p>
+								</div>
+								<div class="circle green" data-id="user3">
+									<p style="color: white">R</p>
+								</div>
+							</div>
+						</section>
+					
+						<!-- Auto-animate focus on Repartidores -->
+						<section data-background="green" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+							<h2>Repartidores</h2>
+							<iframe src="https://giphy.com/embed/mIMsLsQTJzAn6" width="680" height="469" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xT0xePLIUyxnXso8co"></a></p>
+							<p>Encargados das entregas.</p>
+							<div class="circle green small" data-id="user3"></div>
+
+							<aside class="notes">
+								Repartidores: persoas que queren ganar diñeiro a base de repartir comida preto do seu enderezo
+							</aside>
+						</section>
+
+						<!-- Initial introduction with auto-animate -->
+						<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+							<h2 style="color: #3BA9FA;">Usuarios obxectivo</h2>
+							<p><strong>Eatit</strong> é unha plataforma que conecta:</p>
+							<div class="r-hstack justify-center">
+								<div class="circle red" data-id="user1">
+									<p style="color: white">C</p>
+								</div>
+								<div class="circle blue" data-id="user2">
+									<p style="color: white">F</p>
+								</div>
+								<div class="circle green" data-id="user3">
+									<p style="color: white">R</p>
+								</div>
+							</div>
+						</section>	
+					</section>		
+				<!-- #endregion -->
+			
+				<!-- #region 3. Resumo do desenvolvemento -->
+
+					<!-- 1 - Tecnoloxías empregadas -->
+					<section>
+						<section data-background="#3BA9FA">
+							<h2 style="color: white">Tecnoloxías empregadas</h2>
+						</section>
+
+						<!-- Sección: Frontend -->
+						<section>
+							<h2 style="color: #3BA9FA; text-align: start;">Frontend</h2>
+							<div style="display: flex;">
+								<p style="width: 50%; text-align: start;"><strong>React + Vite:</strong> React permite crear interfaces interactivas e eficientes, mentres que Vite acelera o desenvolvemento con tempos de compilación rápidos.</p>
+								<img style="display: block; width: 50%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png"/>
+							</div>
+						</section>
+
+						<!-- Sección: Backend -->
+						<section>
+							<h2 style="color: #3BA9FA; text-align: end;">Backend</h2>
+							<div style="display: flex;">
+								<img style="display: block; width: 50%" src="https://qualitapps.com/wp-content/uploads/2023/02/102.png"/>
+								<p style="width: 50%; text-align: end;"><strong>Node.js + Express:</strong> Node.js permite un backend escalable con JavaScript, mentres que Express simplifica a creación de APIs e rutas.</p>
+							</div>
+						</section>
+
+						<!-- Sección: Base de datos -->
+						<section>
+							<h2 style="color: #3BA9FA; text-align: start;">Base de datos</h2>
+							<div style="display: flex;">
+								<p style="width: 50%; text-align: start;"><strong>MongoDB Atlas:</strong> Unha base de datos NoSQL na nube, ideal para datos flexibles e aplicacións modernas.</p>
+								<img style="display: block; width: 50%" src="https://miro.medium.com/v2/resize:fit:512/1*doAg1_fMQKWFoub-6gwUiQ.png"/>
+							</div>
+						</section>
+
+						<!-- Sección: Despregamento -->
+						<section>
+							<h2 style="color: #3BA9FA; text-align: end;">Despregamento</h2>
+							<div style="display: flex;">
+								<img style="display: block; width: 50%" src="https://media.licdn.com/dms/image/v2/D4E0BAQGGDoFoqHtOvA/company-logo_200_200/company-logo_200_200/0/1702595267620/renderco_logo?e=2147483647&v=beta&t=ZYrxKUyruOEupgw5Lr5amgwgBCJq8VXH8r05Qr5CeQc"/>
+								<p style="width: 50%; text-align: end;"><strong>Render:</strong> Unha plataforma sinxela para despregar aplicacións web e servidores, cun prezo accesible e soporte para proxectos modernos.</p>
+							</div>
+						</section>
+
+						<!-- Sección: Por que estas tecnoloxías? -->
+						<section>
+							<h3 style="color: #3BA9FA;">Por que estas tecnoloxías?</h3>
+							<ul>
+								<li>Rendemento óptimo</li>
+								<li>Escalabilidade</li>
+								<li>Solucións de baixo custo</li>
+							</ul>
+						</section>
+					</section>
+			
+					<!-- 2 - Orzamento e recursos -->
+					<section>
+						<section data-background="#3BA9FA">
+							<h2 style="color: white">Orzamento e recursos</h2>
+						</section>
+
+						<!-- Sección: Custos -->
+						<section>
+							<h2 style="color: #3BA9FA;">Custos principais</h2>
+							<ul>
+								<li>Recursos humanos</li>
+								<li>Custos materiais</li>
+							</ul>
+
+							<aside class="notes">
+								Os custos principais da aplicación proveñen da contratación dun programador a tempo completo durante todo o desenvolvemento. E a contratación ou externalización dun equipo de márketing dixital.
+								A nivel de custos materiais podemos considerar os físicos como un equipo de traballo, suministros coma electricidade e internet e alquiler dun coworking; e outros como a infraestrutura en Render e Atlas e os dominios e certificados de seguridade.
+								En total calculamos sobre uns 8700€ de custo estimado para o MVP.
+							</aside>
+						</section>
+
+						<!-- Sección: Financiamento -->
+						<section>
+							<h2 style="color: #3BA9FA;">Financiamento</h2>
+							<ul>
+								<li>Subvencións da Xunta de Galicia</li>
+								<li>Kit Dixital</li>
+								<li>Microcréditos</li>
+							</ul>
+
+							<aside class="notes">
+								O plan de financiamento inicial de Eatit! baséase nunha combinación de aforros persoais, subvencións públicas e microcréditos. Este enfoque busca garantir a viabilidade económica do proxecto nas súas primeiras fases, proporcionando os recursos necesarios para cubrir gastos de desenvolvemento, márketing e infraestrutura.
+								En total coa combinación dos métodos indicados intentaríase chegar a unha financiación de uns 13.000€, que permitirían financiar a creación do proxecto base, publicitalo e ter un pequeno colchón de cara ás seguintes semanas de seguemento do proxecto.	
+							</aside>
+						</section>
+
+						<!-- Sección: Previsión de ingresos -->
+						<section>
+							<h2 style="color: #3BA9FA;">Ingresos</h2>
+							<ul>
+								<li>Comisión por transaccións</li>
+								<li>Suscricións premium</li>
+								<li>Publicidade</li>
+							</ul>
+
+							<aside class="notes">
+							
+							</aside>
+						</section>
+					</section>
+
+					<!-- 3 - Diagrama de Gantt -->
+					<section>
+						<h2 style="color: #3BA9FA;">Tempos de execución</h2>
+						<img style="width: 2000px;" src="./public/gantt.png"/>
+					</section>
+				<!-- #endregion -->
+			
+				<!-- #region 4. Demostración da aplicación -->
+					<section>
+					<!-- 1 - Demostración da aplicación -->
+					<section data-background="#3BA9FA">
+						<h2 style="color: white">Demostración do funcionamento</h2>
+					</section>
+
+					<section data-background-iframe="https://eatit-mpas.onrender.com/" data-background-interactive>
+						
+						<aside class="notes">
+							1. Breve introdución ao fluxo de usuario: "Un cociñeiro dá de alta unha receita, un foodie inscríbese e finalmente realiza o pago."
+							2. Navegación na plataforma: Mostra o funcionamento básico da web, resaltando as decisións clave de deseño.
+							3. Caso real: Crear unha receita (cociñeiro) → Inscribirse e pagar (foodie) → Publicar comentario.
+						</aside>
 					</section>
 				</section>
+				<!-- #endregion -->
 			
-				<!-- Slide 6: Decisións de deseño -->
-				<section>
-					<h2>Decisións de deseño</h2>
-					<p>Prioridades na interface:</p>
-					<ul>
-						<li><strong>Accesibilidade:</strong> Cores e tipografías lexibles</li>
-						<li><strong>Usabilidade:</strong> Experiencia intuitiva e fluída</li>
-						<li><strong>Visibilidade:</strong> Elementos clave resaltados</li>
-					</ul>
-					<img src="images/deseño-maqueta.png" alt="Decisións de deseño" style="width: 60%; margin-top: 10px;">
-				</section>
+				<!-- #region 5. Conclusións -->
 			
-				<!-- Slide 7: Demostración da aplicación -->
-				<section>
-					<h2>Demostración</h2>
-					<p>Mostra do funcionamento da aplicación:</p>
-					<p style="font-size: 0.8em;">Navegación en directo ou vídeo pregravado</p>
-					<ul>
-						<li>Publicación dunha receita</li>
-						<li>Solicitude dunha receita</li>
-						<li>Seguimento dun pedido</li>
-					</ul>
-					<p><em>Acompañarei esta demostración cunha narración en directo.</em></p>
-				</section>
-			
-				<!-- Slide 8: Orzamento e recursos -->
-				<section>
-					<h2>Orzamento e recursos</h2>
-					<ul>
-						<li><strong>Recursos humanos:</strong> Desenvolvemento, deseño, probas</li>
-						<li><strong>Infraestrutura:</strong> Render + MongoDB Atlas</li>
-						<li><strong>Custo total estimado:</strong> Adaptado a un MVP (baixo custo)</li>
-					</ul>
-					<p>Viabilidade económica realista con opcións de crecemento.</p>
-				</section>
-			
-				<!-- Slide 9: Liñas futuras -->
-				<section>
-					<h2>Liñas futuras</h2>
-					<ul>
-						<li>Perfil máis completo para <strong>repartidores</strong></li>
-						<li>Subscripcións para cociñeiros frecuentes</li>
-						<li>Expansión a máis rexións</li>
-						<li>Funcionalidades avanzadas de seguimento de pedidos</li>
-					</ul>
-				</section>
-			
-				<!-- Slide 10: Conclusión -->
-				<section>
-					<h2>Conclusión</h2>
-					<p><strong>Eatit</strong> é unha plataforma que resolve unha necesidade real:</p>
-					<ul>
-						<li>Promove o consumo local e saudable</li>
-						<li>Ofrece oportunidades a cociñeiros e repartidores</li>
-						<li>É tecnoloxicamente escalable e viable</li>
-					</ul>
-					<p>Grazas pola vosa atención!</p>
-				</section>
+					<!-- 1 - Conclusión -->
+					<section data-background="#3BA9FA">
+						<h2 style="color: white">Conclusión</h2>
+						<aside class="notes">
+							Eatit! representa un exemplo práctico do impacto positivo que a tecnoloxía pode ter na vida cotiá, fomentando a colaboración e a creatividade arredor da gastronomía. Este proxecto senta as bases para futuras melloras e expansións, co potencial de incluír novas funcionalidades, optimizacións e unha maior integración con tecnoloxías emerxentes.
+						</aside>
+					</section>
+
+					<!-- 2: Agradecementos -->
+					<section data-background="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWh0Y2hoMXBuNThzdHhueDZyN3FsNWw0NmpscTRmZ3hydXc0YmZuZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A5OPIlNp8fHQbATsvC/giphy.webp">
+
+						<aside class="notes">
+							Moitas grazas pola vosa atención. Quero agradecer especialmente ao meu titor Fernando Álvarez, a Marcos Alonso e Nuria Castro polos seus comentarios, correccións e suxestións que axudaron a mellorar e refinar o proxecto. Quedo dispoñible para calquera pregunta, suxestión, comentario e/ou insulto
+						</aside>
+					</section>
+
+				<!-- #endregion -->
 			</div>			
 		</div>
 
@@ -151,6 +399,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+        autoAnimate: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
